@@ -41,7 +41,7 @@ function Index() {
           skipEmptyLines: true,
           complete: (results) => {
             if (results.data.length > 0) {
-              setDatas(results.data[0]);
+              setDatas(results.data.find(row => row.id === process.env.NEXT_PUBLIC_ID_CLIENT) || results.data[0]);
             } else {
               setErrorMsg("Data undangan tidak ditemukan.");
             }
