@@ -181,7 +181,7 @@ function Index() {
 
               {/* TEKS UNDANGAN DINAMIS (KOLOM KANAN) */}
               <p className='px-12 pt-4 text-sm'>
-                Kami mengundang Anda untuk hadir dalam {datas?.event_title ? datas.event_title.replace("<br>", " ").replace("\n", " ") : "acara"} :
+                Kami mengundang kalian untuk hadir dalam {datas?.event_title ? datas.event_title.replace("<br>", " ").replace("\n", " ") : "acara"} :
               </p>
 
               <h1 className='font-yellowtail text-[40px] px-4 pt-2'>
