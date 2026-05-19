@@ -24,3 +24,11 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@theme {
+  /* Ini akan otomatis membuat class "font-yellowtail" */
+  --font-yellowtail: var(--font-yellowtail), cursive;
+
+  /* Ini akan otomatis membuat class "font-monserrat" sesuai ejaan di komponen Anda */
+  --font-monserrat: var(--font-montserrat), sans-serif;
+}

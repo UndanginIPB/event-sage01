@@ -1,15 +1,21 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import { Yellowtail, Montserrat } from 'next/font/google'
+import './globals.css'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// 1. Konfigurasi Font Yellowtail
+const yellowtail = Yellowtail({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-yellowtail', // Nama variabel CSS yang akan kita panggil nanti
+  display: 'swap',
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// 2. Konfigurasi Font Montserrat
+const montserrat = Montserrat({
+  weight: ['400', '500', '700'], // Pilih ketebalan yang dibutuhkan
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+  display: 'swap',
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -19,8 +25,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="id"
+      className={`${yellowtail.variable} ${montserrat.variable}`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
